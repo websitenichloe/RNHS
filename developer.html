@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chloe Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #1a1a1a;
+      color: #f5f5f5;
+      line-height: 1.6;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background-color: #222;
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 0 0 20px rgba(255, 204, 0, 0.15);
+    }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      border-bottom: 2px solid #ffcc00;
+      padding-bottom: 20px;
+      margin-bottom: 30px;
+    }
+
+    header img {
+      border-radius: 50%;
+      width: 160px;
+      height: 160px;
+      margin-right: 30px;
+      border: 3px solid #ffcc00;
+      box-shadow: 0 0 10px #ffcc00;
+    }
+
+    header div {
+      flex: 1;
+    }
+
+    header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.2rem;
+      color: #ffcc00;
+      margin-bottom: 10px;
+    }
+
+    a {
+      color: #ffcc00;
+      text-decoration: none;
+    }
+
+    section {
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #333;
+    }
+
+    section h2 {
+      font-family: 'Orbitron', sans-serif;
+      color: #ffcc00;
+      margin-bottom: 12px;
+      font-size: 1.5rem;
+    }
+
+    h3 {
+      color: #ffe680;
+      margin-top: 15px;
+      font-weight: 600;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+    }
+
+    .declaration {
+      border-top: 1px dashed #ffcc00;
+      margin-top: 20px;
+      padding-top: 15px;
+      font-style: italic;
+      color: #ccc;
+      font-size: 0.95rem;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    footer u {
+      color: #ffcc00;
+      font-weight: 600;
+    }
+
+    .back-button {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .back-button button {
+      background-color: #ffcc00;
+      color: #1a1a1a;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .back-button button:hover {
+      background-color: #e6b800;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      header img {
+        margin-bottom: 20px;
+        margin-right: 0;
+      }
+
+      header div {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="Chloe.jpg" alt="Chloe's Photo">
+      <div>
+        <h1>Chloe M. Gonzales</h1>
+        <p>Email: gchloe362@gmail.com | Phone: 09935271926</p>
+        <p>Facebook: <a href="https://www.facebook.com/chloe.gonzales.293254?mibextid=ZbWKwL">Chloe Gonzales</a></p>
+      </div>
+    </header>
+
+    <section>
+      <h2>Objective</h2>
+      <p>To use my skills in the best possible way for achieving the company's goals and to enhance my professional skills in a dynamic and fast-paced workplace.</p>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <h3>Rosales National High School - Senior High School</h3>
+      <p>2023 - 2025</p>
+      <h3>Rosales National High School - Junior High School</h3>
+      <p>2019 - 2023</p>
+      <h3>Rosales North Central School - Elementary</h3>
+      <p>2012 - 2019</p>
+    </section>
+
+    <section>
+      <h2>Talents and Skills</h2>
+      <ul>
+        <li>Basic Coding</li>
+        <li>Animation</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Personal Information</h2>
+      <p><strong>Date of Birth:</strong> September 16, 2006</p>
+      <p><strong>Place of Birth:</strong> Rosales, Pangasinan</p>
+      <p><strong>Age:</strong> 18</p>
+      <p><strong>Civil Status:</strong> Single</p>
+      <p><strong>Religion:</strong> Iglesia ti Dios</p>
+      <p><strong>Height:</strong> 1.72 cm</p>
+      <p><strong>Weight:</strong> 55 kg</p>
+    </section>
+
+    <section>
+      <h2>Character References</h2>
+      <ul>
+        <li><strong>Virginia M. Malala:</strong> Master Teacher III | Guiling, Rosales Pangasinan | Phone: 09959340811</li>
+      </ul>
+      <div class="declaration">
+        I hereby declare that the information provided in this resume is true and accurate to the best of my knowledge. Any false statements or omissions may disqualify me from employment or result in termination.
+      </div>
+    </section>
+
+    <footer>
+      <u>Chloe M. Gonzales</u>
+      <p>Applicant</p>
+    </footer>
+
+    <div class="back-button">
+      <button onclick="location.href='home2.html'">⬅ Back</button>
+    </div>
+  </div>
+</body>
+</html>

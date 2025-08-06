@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registration Form</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .form-container {
+      background-color: rgba(255, 255, 0, 0.9);
+      border-radius: 10px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+      padding: 40px;
+      width: 100%;
+      max-width: 500px;
+      color: black;
+    }
+
+    .form-container h2 {
+      text-align: center;
+      font-size: 32px;
+      color: black;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    label {
+      font-weight: bold;
+      color: black;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    button {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      border: 1px solid gray;
+      background-color: white;
+      font-size: 16px;
+      color: black;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="date"]:focus,
+    button:hover {
+      background-color: #ffe066;
+      border-color: #ffcc00;
+      outline: none;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .hobbies-title {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 12px;
+      color: darkorange;
+      text-align: center;
+    }
+
+    .hobbies-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: flex-start;
+      margin-top: 10px;
+    }
+
+    .hobby-tag {
+      padding: 10px 20px;
+      background-color: black;
+      color: yellow;
+      border-radius: 25px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .hobby-tag:hover {
+      background-color: gray;
+    }
+
+    .hobby-tag .remove-tag {
+      margin-left: 8px;
+      cursor: pointer;
+    }
+
+    button {
+      background-color: black;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: darkorange;
+    }
+
+    .footer-text {
+      text-align: center;
+      margin-top: 20px;
+      color: gray;
+    }
+
+    .footer-text a {
+      text-decoration: none;
+      color: blue;
+    }
+
+    .footer-text a:hover {
+      color: #0055cc;
+    }
+
+    .gender-group {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .gender-options {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 10px;
+    }
+
+    .gender-options label {
+      font-weight: normal;
+    }
+
+    .submit-btn-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .back-btn-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .back-btn-container button {
+      padding: 5px 10px;
+      background-color: black;
+      color: white;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      width: auto;
+    }
+
+    .back-btn-container button:hover {
+      background-color: orange;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Registration Form</h2>
+    <form id="registration-form" action="#" method="post">
+      
+      <div class="form-group">
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" name="last-name" placeholder="Enter your last name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="gender-group">
+        <h3>Gender</h3>
+        <div class="gender-options">
+          <label>
+            <input type="radio" name="gender" value="male" required> Male
+          </label>
+          <label>
+            <input type="radio" name="gender" value="female"> Female
+          </label>
+          <label>
+            <input type="radio" name="gender" value="other"> Other
+          </label>
+        </div>
+      </div>
+
+      <div class="hobbies-title">Type Your Hobbies:</div>
+      <div class="form-group">
+        <input type="text" id="hobbies-input" placeholder="Type a hobby and press Enter" onkeydown="addHobby(event)">
+      </div>
+      <div class="hobbies-container" id="hobbies-list"></div>
+
+      <div class="form-group">
+        <label for="dob">Birthday:</label>
+        <input type="date" id="dob" name="dob" required>
+      </div>
+
+      <div class="form-group">
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" placeholder="Enter your address" required>
+      </div>
+
+      <div class="submit-btn-container">
+        <button type="submit" onclick="location.href='index.html'">Register</button>
+      </div>
+
+      <div class="back-btn-container">
+        <button type="button" onclick="location.href='index.html'">⬅ Back</button>
+      </div>
+
+    </form>
+  </div>
+
+  <script>
+    function addHobby(event) {
+      const input = document.getElementById("hobbies-input");
+      const hobbiesList = document.getElementById("hobbies-list");
+
+      if (event.key === "Enter" && input.value.trim() !== "") {
+        event.preventDefault();
+        const hobby = input.value.trim();
+        const hobbyTag = document.createElement("div");
+        hobbyTag.classList.add("hobby-tag");
+        hobbyTag.innerHTML = `${hobby} <span class="remove-tag" onclick="removeHobby(this)">x</span>`;
+        hobbiesList.appendChild(hobbyTag);
+        input.value = "";
+      }
+    }
+
+    function removeHobby(element) {
+      element.parentElement.remove();
+    }
+
+    document.getElementById("registration-form").addEventListener("submit", function (e) {
+      const hobbiesList = document.getElementById("hobbies-list");
+      if (hobbiesList.children.length === 0) {
+        alert("Please add at least one hobby before submitting.");
+        e.preventDefault();
+      }
+    });
+  </script>
+
+</body>
+</html>
